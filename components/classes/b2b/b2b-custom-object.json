@@ -1,0 +1,52 @@
+{
+  "meta:license": [
+    "Copyright 2023 Adobe Systems Incorporated. All rights reserved.",
+    "This work is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license",
+    "you may not use this file except in compliance with the License. You may obtain a copy",
+    "of the License at https://creativecommons.org/licenses/by/4.0/"
+  ],
+  "$id": "https://ns.adobe.com/xdm/context/b2b-custom-object",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "XDM Custom Object",
+  "type": "object",
+  "meta:tags": {
+    "b2bSchema": true
+  },
+  "auditable": true,
+  "meta:extensible": true,
+  "meta:abstract": true,
+  "meta:extends": ["https://ns.adobe.com/xdm/data/record"],
+  "description": "XDM Custom Object is a standard Experience Data Model (XDM) class that captures the minimum required properties of a custom object. This XDM class can only be included in the profile for customers with the B2B or B2P Edition.",
+  "definitions": {
+    "customObject": {
+      "properties": {
+        "xdm:customObjectID": {
+          "title": "Object ID",
+          "description": "Unique ID for the custom object.",
+          "type": "string",
+          "meta:status": "experimental"
+        },
+        "xdm:customObjectKey": {
+          "title": "Object Key",
+          "description": "Unique composite key identifier for the B2B Custom Object.",
+          "$ref": "https://ns.adobe.com/xdm/datatypes/b2b-source"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://ns.adobe.com/xdm/common/extensible#/definitions/@context"
+    },
+    {
+      "$ref": "https://ns.adobe.com/xdm/data/record"
+    },
+    {
+      "$ref": "#/definitions/b2b-custom-object"
+    },
+    {
+      "$ref": "https://ns.adobe.com/xdm/common/external-source-system-audit-details"
+    }
+  ],
+  "meta:status": "unstable"
+}

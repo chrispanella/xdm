@@ -145,7 +145,8 @@
       "https://ns.adobe.com/xdm/mixins/events/remove-from-opportunity",
       "https://ns.adobe.com/xdm/mixins/events/scorechanged",
       "https://ns.adobe.com/xdm/mixins/events/statusincampaignprogressionchanged",
-      "https://ns.adobe.com/xdm/mixins/events/visit-webpage"
+      "https://ns.adobe.com/xdm/context/b2b-custom-object",   "https://ns.adobe.com/xdm/mixins/events/visit-webpage",
+
     ]
   }
 }
